@@ -103,6 +103,11 @@ Once all files exist, confirm:
 >
 > Everything is customizable — just ask me to change anything."
 
+Then suggest automation:
+> "Want me to scan for new offers automatically? I can set up a recurring scan every few days so you don't miss anything. Just say 'scan every 3 days' and I'll configure it."
+
+If the user accepts, use the `/loop` or `/schedule` skill (if available) to set up a recurring `/sadhak scan`. If those aren't available, suggest adding a cron job or remind them to run `/sadhak scan` periodically.
+
 ### Personalization
 
 This system is designed to be customized by YOU (Claude). When the user asks to change archetypes, translate modes, adjust scoring, add companies, or modify templates — do it directly.
@@ -120,6 +125,7 @@ This system is designed to be customized by YOU (Claude). When the user asks to 
 |----------------|------|
 | Pastes JD or URL | auto-pipeline (evaluate + resume PDF + cover letter + tracker) |
 | Asks to evaluate offer | `evaluate` |
+| Asks to compare offers | `compare` |
 | Wants to generate resume PDF | `pdf` |
 | Wants a cover letter | `cover-letter` |
 | Asks about application status | `tracker` |
@@ -129,6 +135,8 @@ This system is designed to be customized by YOU (Claude). When the user asks to 
 | Batch processes offers | `batch` |
 | Asks for company research | `deep` |
 | Wants LinkedIn outreach | `outreach` |
+| Evaluates a course/cert | `training` |
+| Evaluates portfolio project | `project` |
 
 ### CV Source of Truth
 

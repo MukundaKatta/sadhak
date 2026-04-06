@@ -19,10 +19,13 @@ args: mode
 | `scan` | scan | _shared.md + scan.md |
 | `pipeline` | pipeline | _shared.md + pipeline.md |
 | `batch` | batch | _shared.md + batch.md |
+| `compare` | compare | _shared.md + compare.md |
 | `tracker` | tracker | tracker.md only |
 | `apply` | apply | _shared.md + apply.md |
 | `deep` | deep | deep.md only |
 | `outreach` | outreach | _shared.md + outreach.md |
+| `training` | training | _shared.md + training.md |
+| `project` | project | _shared.md + project.md |
 
 ## Auto-Detection
 
@@ -50,8 +53,11 @@ Available commands:
   /sadhak batch              → Batch evaluate multiple offers
   /sadhak tracker            → View application status
   /sadhak apply              → Fill application forms with AI
+  /sadhak compare            → Compare multiple offers side by side
   /sadhak deep               → Deep company research
   /sadhak outreach           → LinkedIn/email outreach messages
+  /sadhak training           → Evaluate a course or certification
+  /sadhak project            → Evaluate a portfolio project idea
 
 Or just paste a job URL or description — Sadhak auto-detects it.
 ```

@@ -126,6 +126,162 @@ tracked_companies:
     careers_url: "https://www.cloudflare.com/careers/jobs"
     enabled: true
 
+  # --- AI Platforms ---
+  - name: "LangChain"
+    careers_url: "https://jobs.ashbyhq.com/langchain"
+    enabled: true
+    notes: "LLM framework, LangSmith"
+
+  - name: "Pinecone"
+    careers_url: "https://jobs.ashbyhq.com/pinecone"
+    enabled: true
+    notes: "Vector database"
+
+  - name: "Arize AI"
+    careers_url: "https://jobs.ashbyhq.com/arize"
+    enabled: true
+    notes: "ML observability"
+
+  - name: "Weights & Biases"
+    careers_url: "https://jobs.lever.co/wandb"
+    enabled: true
+    notes: "MLOps platform"
+
+  - name: "Langfuse"
+    careers_url: "https://jobs.ashbyhq.com/langfuse"
+    enabled: true
+    notes: "LLM observability, open source"
+
+  # --- Voice AI ---
+  - name: "ElevenLabs"
+    careers_url: "https://jobs.ashbyhq.com/elevenlabs"
+    enabled: true
+    notes: "Voice synthesis"
+
+  - name: "Deepgram"
+    careers_url: "https://jobs.lever.co/deepgram"
+    enabled: true
+    notes: "Speech recognition"
+
+  - name: "Hume AI"
+    careers_url: "https://jobs.ashbyhq.com/hume"
+    enabled: true
+    notes: "Emotionally intelligent AI"
+
+  # --- Developer Platforms ---
+  - name: "Temporal"
+    careers_url: "https://jobs.ashbyhq.com/temporal"
+    enabled: true
+    notes: "Workflow orchestration"
+
+  - name: "Airtable"
+    careers_url: "https://airtable.com/careers"
+    enabled: true
+
+  - name: "Glean"
+    careers_url: "https://jobs.ashbyhq.com/glean"
+    enabled: true
+    notes: "Enterprise AI search"
+
+  - name: "Figma"
+    careers_url: "https://www.figma.com/careers"
+    enabled: true
+
+  - name: "Linear"
+    careers_url: "https://linear.app/careers"
+    enabled: true
+    notes: "Project management"
+
+  - name: "Notion"
+    careers_url: "https://www.notion.so/careers"
+    enabled: true
+
+  # --- Enterprise / Comms ---
+  - name: "Salesforce"
+    careers_url: "https://careers.salesforce.com"
+    enabled: true
+
+  - name: "Twilio"
+    careers_url: "https://www.twilio.com/company/jobs"
+    api: "https://boards-api.greenhouse.io/v1/boards/twilio/jobs"
+    enabled: true
+
+  - name: "Gong"
+    careers_url: "https://www.gong.io/careers"
+    api: "https://boards-api.greenhouse.io/v1/boards/gong/jobs"
+    enabled: true
+
+  - name: "Dialpad"
+    careers_url: "https://www.dialpad.com/careers"
+    api: "https://boards-api.greenhouse.io/v1/boards/dialpad/jobs"
+    enabled: true
+
+  # --- Contact Center AI ---
+  - name: "Ada"
+    careers_url: "https://jobs.lever.co/ada"
+    enabled: true
+    notes: "AI customer service"
+
+  - name: "LivePerson"
+    careers_url: "https://jobs.lever.co/liveperson"
+    enabled: true
+
+  - name: "Sierra"
+    careers_url: "https://jobs.ashbyhq.com/sierra"
+    enabled: true
+    notes: "Conversational AI, Bret Taylor"
+
+  - name: "Talkdesk"
+    careers_url: "https://www.talkdesk.com/careers"
+    enabled: true
+
+  # --- Automation / No-Code ---
+  - name: "n8n"
+    careers_url: "https://jobs.ashbyhq.com/n8n"
+    enabled: true
+    notes: "Open source workflow automation"
+
+  - name: "Zapier"
+    careers_url: "https://zapier.com/jobs"
+    api: "https://boards-api.greenhouse.io/v1/boards/zapier/jobs"
+    enabled: true
+
+  # --- Fintech ---
+  - name: "Plaid"
+    careers_url: "https://plaid.com/careers"
+    enabled: true
+
+  - name: "Ramp"
+    careers_url: "https://jobs.ashbyhq.com/ramp"
+    enabled: true
+    notes: "Corporate finance"
+
+  - name: "Brex"
+    careers_url: "https://www.brex.com/careers"
+    api: "https://boards-api.greenhouse.io/v1/boards/brex/jobs"
+    enabled: true
+
+  # --- European Tech ---
+  - name: "Factorial"
+    careers_url: "https://jobs.ashbyhq.com/factorial"
+    enabled: true
+    notes: "HR platform, Barcelona"
+
+  - name: "Attio"
+    careers_url: "https://jobs.ashbyhq.com/attio"
+    enabled: true
+    notes: "CRM, London"
+
+  - name: "Tinybird"
+    careers_url: "https://jobs.ashbyhq.com/tinybird"
+    enabled: true
+    notes: "Real-time analytics, Madrid"
+
+  - name: "Travelperk"
+    careers_url: "https://www.travelperk.com/careers"
+    api: "https://boards-api.greenhouse.io/v1/boards/travelperk/jobs"
+    enabled: true
+
   # --- Add your target companies below ---
   # - name: "Company Name"
   #   careers_url: "https://..."

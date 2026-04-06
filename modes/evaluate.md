@@ -96,6 +96,19 @@ JD text or URL. If URL, extract JD using Playwright → WebFetch → WebSearch f
 | 3.0–3.4 | Weak — recommend skip unless specific reason |
 | < 3.0 | Skip — not worth the effort |
 
+### Block G — Draft Application Answers (only if score >= 4.5)
+
+Generate draft answers for common application form questions:
+1. Why are you interested in this role?
+2. Why this company?
+3. Describe your most relevant experience
+4. What makes you a good fit?
+5. Salary expectations
+
+**Tone:** Confident but not arrogant, specific, proof-led. "I built X that does Y" not "I'm great at X."
+
+Use the "I'm choosing you" confidence framing — the candidate is selecting this company, not begging for a job. Each answer should reference specific proof points from cv.md or article-digest.md.
+
 ## Report Format
 
 ```markdown
@@ -105,6 +118,7 @@ JD text or URL. If URL, extract JD using Playwright → WebFetch → WebSearch f
 **Score:** {X.X}/5 — {Recommendation}
 **URL:** {job_url}
 **PDF:** {path_or_pending}
+**Cover Letter:** {path_or_pending}
 **Archetype:** {detected_archetype}
 
 ## A. Role Summary
@@ -125,10 +139,16 @@ JD text or URL. If URL, extract JD using Playwright → WebFetch → WebSearch f
 ## F. Interview Prep
 {content}
 
+## G. Draft Application Answers
+{only if score >= 4.5 — draft answers for application form}
+
 ## Scoring Breakdown
-| Dimension | Score | Notes |
-|-----------|-------|-------|
-{10 rows}
+| Dimension | Weight | Score | Notes |
+|-----------|--------|-------|-------|
+{10 rows with weights}
 
 **Final Score: {X.X}/5**
+
+## Keywords Extracted
+{15-20 keywords from JD for ATS optimization}
 ```
