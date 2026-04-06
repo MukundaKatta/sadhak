@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{FULL_NAME}} — Resume</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a {
+    color: hsl(187, 74%, 32%);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .page {
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.6in;
+  }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 6px; }
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+  }
+  .header-gradient {
+    height: 3px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    margin: 6px 0 8px;
+    border-radius: 2px;
+  }
+  .contact-row {
+    font-size: 10px;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .contact-row a { color: hsl(187, 74%, 32%); }
+
+  /* Sections */
+  .section { margin-bottom: 14px; }
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid hsl(187, 74%, 32%);
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  /* Summary */
+  .summary-text {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* Core Competencies */
+  .competencies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .competency-tag {
+    background: hsl(187, 74%, 95%);
+    color: hsl(187, 74%, 25%);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  /* Work Experience */
+  .job { margin-bottom: 12px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-company {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .job-date { font-size: 10px; color: #666; }
+  .job-role {
+    font-style: italic;
+    font-size: 11px;
+    color: #444;
+    margin-bottom: 4px;
+  }
+  .job ul { padding-left: 16px; }
+  .job li { margin-bottom: 2px; font-size: 11px; }
+
+  /* Projects */
+  .project { margin-bottom: 10px; }
+  .project-header { display: flex; align-items: baseline; gap: 8px; }
+  .project-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+  }
+  .project-badge {
+    background: hsl(270, 70%, 93%);
+    color: hsl(270, 70%, 35%);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 500;
+  }
+  .project-desc { font-size: 11px; color: #333; }
+
+  /* Education */
+  .edu-item { margin-bottom: 6px; }
+  .edu-item strong { font-size: 11px; }
+  .cert-item { margin-bottom: 4px; font-size: 11px; }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+    font-size: 11px;
+  }
+  .skills-grid dt { font-weight: 600; color: #333; }
+  .skills-grid dd { color: #555; }
+
+  @media print {
+    .page { padding: 0; }
+    body { -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>{{FULL_NAME}}</h1>
+    <div class="contact-row">
+      <span>{{EMAIL}}</span>
+      <span>{{PHONE}}</span>
+      <span>{{LOCATION}}</span>
+      <a href="{{LINKEDIN_URL}}">LinkedIn</a>
+      <a href="{{PORTFOLIO_URL}}">Portfolio</a>
+      <a href="{{GITHUB_URL}}">GitHub</a>
+    </div>
+  </div>
+  <div class="header-gradient"></div>
+
+  <!-- Professional Summary -->
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">{{PROFESSIONAL_SUMMARY}}</div>
+  </div>
+
+  <!-- Core Competencies -->
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      {{CORE_COMPETENCIES}}
+    </div>
+  </div>
+
+  <!-- Work Experience -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+    {{WORK_EXPERIENCE}}
+  </div>
+
+  <!-- Projects -->
+  <div class="section">
+    <div class="section-title">Projects</div>
+    {{PROJECTS}}
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    {{EDUCATION}}
+  </div>
+
+  <!-- Certifications -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    {{CERTIFICATIONS}}
+  </div>
+
+  <!-- Skills -->
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <dl class="skills-grid">
+      {{SKILLS}}
+    </dl>
+  </div>
+
+</div>
+</body>
+</html>

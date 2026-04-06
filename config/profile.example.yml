@@ -1,0 +1,75 @@
+# Sadhak — Candidate Profile
+# Copy this to config/profile.yml and fill in your details.
+
+candidate:
+  full_name: "Your Name"
+  email: "you@example.com"
+  phone: "+1-555-0100"
+  location: "City, Country"
+  linkedin: "https://linkedin.com/in/yourprofile"
+  portfolio_url: ""  # Optional
+  github: ""  # Optional
+  twitter: ""  # Optional
+
+target_roles:
+  primary:
+    - "Senior Software Engineer"
+    - "Staff Engineer"
+    # Add your target role titles here
+
+  archetypes:
+    - name: "Backend Engineer"
+      level: "Senior"
+      fit: "primary"
+    - name: "Full-Stack Engineer"
+      level: "Senior"
+      fit: "secondary"
+    # Map your targets to archetypes from modes/_shared.md
+
+narrative:
+  headline: "One-line description of who you are and what you do"
+  exit_story: |
+    Why you're looking for a new role. This narrative is woven into
+    cover letters, resume summaries, and interview prep.
+    Make it compelling but authentic.
+  superpowers:
+    - "Your unique strength #1"
+    - "Your unique strength #2"
+    - "Your unique strength #3"
+  proof_points:
+    - name: "Notable Project"
+      url: ""  # Optional link
+      hero_metric: "Key achievement metric"
+    - name: "Another Achievement"
+      url: ""
+      hero_metric: "Impact number"
+  # Optional: portfolio dashboard
+  # dashboard:
+  #   url: "https://your-portfolio.com/dashboard"
+  #   password: ""
+
+compensation:
+  target_range: "$150,000 - $200,000"
+  currency: "USD"
+  minimum: "$140,000"  # Walk-away number (never shared externally)
+  location_flexibility: "remote-preferred"  # remote-only, remote-preferred, hybrid-ok, onsite-ok
+
+location:
+  country: "United States"
+  city: "San Francisco"
+  timezone: "America/Los_Angeles"
+  visa_status: "citizen"  # citizen, permanent-resident, visa-holder, need-sponsorship
+  onsite_availability: "none"  # none, occasional, weekly, daily
+
+preferences:
+  company_stage:
+    - "growth"       # Series B+
+    - "enterprise"   # Large public companies
+    # Options: seed, early, growth, enterprise
+  deal_breakers:
+    - "no on-site only"
+    - "no unpaid take-home assignments over 4 hours"
+    # Add your hard no's here
+  nice_to_have:
+    - "engineering blog"
+    - "open source contributions"

@@ -1,0 +1,135 @@
+# Sadhak — Portal Scanner Configuration
+# Copy this to portals.yml and customize for your job search.
+
+title_filter:
+  positive:
+    # Add keywords that match your target roles
+    - "Software Engineer"
+    - "Backend Engineer"
+    - "Frontend Engineer"
+    - "Full Stack"
+    - "Staff Engineer"
+    - "Senior Engineer"
+    - "Engineering Manager"
+    - "Tech Lead"
+    - "Platform Engineer"
+    - "DevOps"
+    - "SRE"
+    - "Machine Learning"
+    - "AI Engineer"
+    - "Data Engineer"
+    - "Solutions Architect"
+
+  negative:
+    # Exclude roles you don't want
+    - "Junior"
+    - "Intern"
+    - "Co-op"
+    - "Associate"
+    - ".NET"
+    - "iOS"
+    - "Android"
+    - "Blockchain"
+    - "Web3"
+    - "COBOL"
+    - "Mainframe"
+    - "Sales"
+    - "Marketing"
+    - "Recruiter"
+    - "Designer"
+
+  seniority_boost:
+    # These keywords boost a listing's priority
+    - "Senior"
+    - "Staff"
+    - "Principal"
+    - "Lead"
+    - "Head"
+    - "Director"
+
+search_queries:
+  # WebSearch queries with site: filters for broad discovery.
+  # Enable/disable as needed.
+
+  - name: "Ashby — Software Engineering"
+    query: "site:jobs.ashbyhq.com software engineer"
+    enabled: true
+
+  - name: "Greenhouse — Software Engineering"
+    query: "site:boards.greenhouse.io software engineer"
+    enabled: true
+
+  - name: "Lever — Software Engineering"
+    query: "site:jobs.lever.co software engineer"
+    enabled: true
+
+  - name: "Wellfound — Engineering"
+    query: "site:wellfound.com software engineer remote"
+    enabled: true
+
+  - name: "Workable — Engineering"
+    query: "site:apply.workable.com software engineer"
+    enabled: false
+
+  - name: "LinkedIn — Target Role"
+    query: "site:linkedin.com/jobs senior software engineer remote"
+    enabled: false
+
+tracked_companies:
+  # Companies to scan directly. Add your target companies here.
+  # Each company needs at minimum: name + careers_url OR api
+
+  # --- AI Labs ---
+  - name: "Anthropic"
+    careers_url: "https://jobs.ashbyhq.com/anthropic"
+    enabled: true
+    notes: "Claude, AI safety"
+
+  - name: "OpenAI"
+    careers_url: "https://jobs.ashbyhq.com/openai"
+    enabled: true
+    notes: "ChatGPT, GPT models"
+
+  - name: "Mistral"
+    careers_url: "https://jobs.ashbyhq.com/mistralai"
+    enabled: true
+
+  - name: "Cohere"
+    careers_url: "https://jobs.lever.co/cohere"
+    enabled: true
+
+  # --- Developer Tools ---
+  - name: "Vercel"
+    careers_url: "https://vercel.com/careers"
+    enabled: true
+    notes: "Next.js, frontend infra"
+
+  - name: "Stripe"
+    careers_url: "https://stripe.com/jobs"
+    enabled: true
+
+  - name: "Retool"
+    careers_url: "https://retool.com/careers"
+    enabled: true
+
+  - name: "Supabase"
+    careers_url: "https://supabase.com/careers"
+    enabled: true
+
+  # --- Infrastructure ---
+  - name: "Datadog"
+    careers_url: "https://careers.datadoghq.com"
+    api: "https://boards-api.greenhouse.io/v1/boards/datadog/jobs"
+    enabled: true
+
+  - name: "Cloudflare"
+    careers_url: "https://www.cloudflare.com/careers/jobs"
+    enabled: true
+
+  # --- Add your target companies below ---
+  # - name: "Company Name"
+  #   careers_url: "https://..."
+  #   api: ""  # Optional: Greenhouse API endpoint
+  #   scan_method: "playwright"  # playwright (default), websearch, greenhouse_api
+  #   enabled: true
+  #   notes: ""

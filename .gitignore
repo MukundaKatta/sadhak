@@ -1,0 +1,17 @@
+node_modules/
+output/
+batch/tracker-additions/*.tsv
+batch/tracker-additions/merged/
+batch/logs/
+batch/batch-state.tsv
+batch/batch-input.tsv
+data/applications.md
+data/pipeline.md
+data/scan-history.tsv
+cv.md
+article-digest.md
+config/profile.yml
+portals.yml
+*.pdf
+.env
+.DS_Store

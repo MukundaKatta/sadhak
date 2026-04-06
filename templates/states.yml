@@ -1,0 +1,58 @@
+# Canonical Application States
+# Shared between Sadhak (writer) and any dashboard (reader).
+# The status field in applications.md must be exactly one of these values.
+
+states:
+  - id: evaluated
+    label: "Evaluated"
+    aliases: ["Eval", "Reviewed"]
+    description: "Report completed, pending decision to apply"
+    dashboard_group: "pipeline"
+
+  - id: applied
+    label: "Applied"
+    aliases: ["Submitted", "Sent"]
+    description: "Application submitted by candidate"
+    dashboard_group: "active"
+
+  - id: responded
+    label: "Responded"
+    aliases: ["Reply", "Replied"]
+    description: "Company responded to application"
+    dashboard_group: "active"
+
+  - id: interview
+    label: "Interview"
+    aliases: ["Interviewing", "Phone Screen", "Technical", "Onsite", "Final Round"]
+    description: "In interview process (any stage)"
+    dashboard_group: "active"
+
+  - id: offer
+    label: "Offer"
+    aliases: ["Offered"]
+    description: "Offer received from company"
+    dashboard_group: "terminal"
+
+  - id: rejected
+    label: "Rejected"
+    aliases: ["Declined by Company", "No"]
+    description: "Rejected by company at any stage"
+    dashboard_group: "terminal"
+
+  - id: discarded
+    label: "Discarded"
+    aliases: ["Withdrawn", "Closed", "Expired"]
+    description: "Discarded by candidate or offer closed/expired"
+    dashboard_group: "terminal"
+
+  - id: skip
+    label: "SKIP"
+    aliases: ["No Apply", "Pass"]
+    description: "Evaluated but not worth applying"
+    dashboard_group: "terminal"
+
+# Rules:
+# - No markdown bold (**) in status field
+# - No dates in status field (use the date column)
+# - No extra text (use the notes column)
+# - Status must match one of the IDs or aliases above

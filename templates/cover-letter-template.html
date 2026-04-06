@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cover Letter — {{FULL_NAME}} → {{COMPANY_NAME}}</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('./fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #1a1a2e;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.8in;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 2px;
+  }
+  .header-gradient {
+    height: 3px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    margin: 6px 0 12px;
+    border-radius: 2px;
+  }
+  .contact-info {
+    font-size: 10px;
+    color: #666;
+  }
+  .contact-info a { color: hsl(187, 74%, 32%); text-decoration: none; }
+
+  .date {
+    margin-bottom: 16px;
+    font-size: 11px;
+    color: #666;
+  }
+
+  .recipient {
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #333;
+  }
+
+  .subject {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(187, 74%, 32%);
+    margin-bottom: 20px;
+  }
+
+  .body p {
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .closing {
+    margin-top: 24px;
+    font-size: 12px;
+    color: #333;
+  }
+  .closing .name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  @media print {
+    .page { padding: 0.6in; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <h1>{{FULL_NAME}}</h1>
+    <div class="contact-info">
+      {{EMAIL}} | {{PHONE}} | {{LOCATION}} |
+      <a href="{{LINKEDIN_URL}}">LinkedIn</a>
+    </div>
+  </div>
+  <div class="header-gradient"></div>
+
+  <div class="date">{{DATE}}</div>
+
+  <div class="recipient">
+    {{RECIPIENT_NAME}}<br>
+    {{COMPANY_NAME}}<br>
+    {{COMPANY_ADDRESS}}
+  </div>
+
+  <div class="subject">Re: {{ROLE_TITLE}}</div>
+
+  <div class="body">
+    {{COVER_LETTER_BODY}}
+  </div>
+
+  <div class="closing">
+    Best regards,
+    <div class="name">{{FULL_NAME}}</div>
+  </div>
+
+</div>
+</body>
+</html>
