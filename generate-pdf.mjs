@@ -10,8 +10,9 @@
  */
 
 import { chromium } from 'playwright';
-import { readFile, stat } from 'node:fs/promises';
+import { readFile, writeFile, stat } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
 
@@ -39,7 +40,7 @@ async function main() {
   );
 
   // Also handle fonts relative to project root
-  const projectRoot = resolve(import.meta.dirname || dirname(import.meta.url.replace('file://', '')));
+  const projectRoot = resolve(import.meta.dirname ?? dirname(fileURLToPath(import.meta.url)));
   html = html.replace(
     /url\(['"]?fonts\//g,
     `url('file://${projectRoot}/fonts/`
@@ -78,7 +79,6 @@ async function main() {
   await browser.close();
 
   // Write PDF
-  const { writeFile } = await import('node:fs/promises');
   await writeFile(outputPath, pdfBuffer);
 
   // Count pages (regex on PDF structure)

@@ -47,7 +47,7 @@ Inspired by [career-ops](https://github.com/santifer/career-ops) by Santiago Fer
 
 ```bash
 # 1. Clone and install
-git clone <your-repo-url>
+git clone https://github.com/MukundaKatta/sadhak
 cd sadhak && npm install
 npx playwright install chromium   # Required for PDF generation
 
